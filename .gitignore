@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+.idea
+.classpath
+.project
+*.iml
+**/target
+.sbt-launch.jar
