@@ -10,7 +10,7 @@ import io.buoyant.namer.{NamerConfig, NamerInitializer}
   * Normalize a path segment to what is a valid kubernetes service name
   *
   * @param segment     which path element to normalize
-  * @param serviceOnly drop the package, and use only the service name (after last '.')
+  * @param serviceOnly if true, drop the grpc package name and use only the service name (after last '.')
   */
 class K8sNormalize(segment: Int, serviceOnly: Boolean) extends Namer {
 
@@ -48,7 +48,7 @@ case class K8sNormalizeConfig(segment: Option[Int] = None,
   @JsonIgnore override protected
   def newNamer(params: Params): Namer = new K8sNormalize(
     segment.getOrElse(2),
-    serviceOnly.getOrElse(true))
+    serviceOnly.getOrElse(false))
 }
 
 

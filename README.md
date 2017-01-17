@@ -23,7 +23,7 @@ GRPC will make a request with `:path` set to `/helloworld.Greeter/SayHello`. Thi
 | --- | ------- | ----------- |
 | kind | com.markeijsermans.k8s.normalize | The plugin's id |
 | segment | 2 | The path segment to normalize |
-| serviceOnly | true | Drop the package and only use the service name. True rewrites `helloworld.Greeter` to `greeter`, false rewrites to `helloworld-greeter` |
+| serviceOnly | false | Drop the package and only use the service name. True rewrites `helloworld.Greeter` to `greeter`, false rewrites to `helloworld-greeter` |
 
 
 
@@ -33,7 +33,7 @@ GRPC will make a request with `:path` set to `/helloworld.Greeter/SayHello`. Thi
 namers:
 - kind: com.markeijsermans.k8s.normalize
   segment: 2
-  serviceOnly: true
+  serviceOnly: false
 - kind: io.l5d.k8s
   host: localhost
   port: 8001
