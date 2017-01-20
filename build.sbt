@@ -14,6 +14,7 @@ val k8sNormalize =
       scalaVersion := "2.11.7",
       organization := "com.markeijsermans",
       name := "k8s-normalize",
+      version := "1.0.0",
       resolvers ++= Seq(
         "twitter" at "https://maven.twttr.com",
         "local-m2" at ("file:" + Path.userHome.absolutePath + "/.m2/repository")
