@@ -23,6 +23,7 @@ val k8sNormalize =
         twitterUtil("core") % "provided" ::
         linkerd("core") % "provided" ::
         linkerd("protocol-http") % "provided" ::
+        "org.scalatest" %% "scalatest" % "2.2.4" % "provided" ::
         Nil,
       assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
     )
