@@ -66,14 +66,21 @@ make all
 
 ## Running
 
-```bash
-# Refer to linkerd's image for full docs, as this inherits from it: 
-docker run ... markeijsermans/linkerd:0.8.5 ... 
- 
-# An example.
-# This will run the container with `test.conf` and debug logging. Check for output:
-# LoadService: loaded instance of class com.markeijsermans.linkerd.namers.K8sNormalizeInitializer for requested service io.buoyant.namer.NamerInitializer
-make run
+#### Plugin jar
+Download from releases
+Refer to the [plugin docs](https://linkerd.io/in-depth/plugin/) on how run linkerd with plugins 
 
+#### Docker
+Refer to linkerd's docker image for full docs and run args, as this image inherits from it. It's based on the 32-bit java version for better memory usage. 
+```bash
+docker pull markeijsermans/linkerd:0.8.6-32b 
 ```
-     
+ 
+#### Sanity test
+```bash
+make run
+```
+This will run the container with `test.conf` and debug logging. Check for output:
+```
+LoadService: loaded instance of class com.markeijsermans.linkerd.namers.K8sNormalizeInitializer for requested service io.buoyant.namer.NamerInitializer
+```
