@@ -1,4 +1,4 @@
-IMAGE := markeijsermans/linkerd:0.8.6-32b
+IMAGE := markeijsermans/linkerd:0.9.0
 
 all: clean build container
 
@@ -17,4 +17,4 @@ push:
 # check for output:
 # LoadService: loaded instance of class com.markeijsermans.linkerd.namers.K8sNormalizeInitializer for requested service io.buoyant.namer.NamerInitializer
 run:
-	docker run -ti --rm -p 5001 -p 9990 -v "$(shell pwd)/test.conf:/test.conf" $(IMAGE) /test.conf -log.level=DEBUG
+	docker run -ti --rm -p 5001 -p 9990 -v "$(shell pwd)/test-conf.yaml:/test-conf.yaml" $(IMAGE) /test-conf.yaml -log.level=DEBUG
