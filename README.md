@@ -45,10 +45,10 @@ routers:
   identifier:
     kind: io.l5d.headerPath
     segments: 2
-  baseDtab: |
-    /rw => /#/io.l5d.k8s/default/grpc;
-    /srv=> /#/com.markeijsermans.k8s.normalize/rw;
-    /h2 => /srv;
+  dtab: |
+    /rw  => /#/io.l5d.k8s/default/grpc;
+    /srv => /#/com.markeijsermans.k8s.normalize/rw;
+    /svc => /srv;
   servers:
   - port: 5001
     ip: 0.0.0.0

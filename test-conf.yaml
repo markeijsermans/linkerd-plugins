@@ -17,8 +17,8 @@ routers:
     kind: io.l5d.headerPath
     segments: 2
   dtab: |
-    /rw => /#/io.l5d.k8s/default/grpc;
-    /srv=> /#/com.markeijsermans.k8s.normalize/rw;
+    /rw  => /#/io.l5d.k8s/default/grpc;
+    /srv => /#/com.markeijsermans.k8s.normalize/rw;
     /svc => /srv;
   servers:
   - port: 5001
