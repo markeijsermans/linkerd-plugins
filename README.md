@@ -73,7 +73,7 @@ Refer to the [plugin docs](https://linkerd.io/in-depth/plugin/) on how run linke
 #### Docker
 Refer to linkerd's docker image for full docs and run args, as this image inherits from it 
 ```bash
-docker pull markeijsermans/linkerd:0.9.0 
+docker pull markeijsermans/linkerd:0.9.1 
 ```
  
 #### Sanity test
