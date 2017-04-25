@@ -14,7 +14,7 @@ routers:
   experimental: true
   label: grpc
   identifier:
-    kind: io.l5d.headerPath
+    kind: io.l5d.header.path
     segments: 2
   dtab: |
     /rw  => /#/io.l5d.k8s/default/grpc;

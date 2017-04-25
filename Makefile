@@ -1,4 +1,4 @@
-IMAGE := markeijsermans/linkerd:0.9.1
+IMAGE := markeijsermans/linkerd:1.0.0
 
 all: clean build container
 

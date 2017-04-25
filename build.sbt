@@ -6,7 +6,7 @@ def finagle(mod: String) =
   "com.twitter" %% s"finagle-$mod" % "6.41.0"
 
 def linkerd(mod: String) =
-  "io.buoyant" %% s"linkerd-$mod" % "0.9.1"
+  "io.buoyant" %% s"linkerd-$mod" % "1.0.0"
 
 val k8sNormalize =
   project.in(file("k8s-normalize")).
@@ -14,7 +14,7 @@ val k8sNormalize =
       scalaVersion := "2.11.7",
       organization := "com.markeijsermans",
       name := "k8s-normalize",
-      version := "1.0.3",
+      version := "1.0.4",
       resolvers ++= Seq(
         "twitter" at "https://maven.twttr.com",
         "local-m2" at ("file:" + Path.userHome.absolutePath + "/.m2/repository")
